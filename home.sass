@@ -1,5 +1,5 @@
 $bgDefault      : #fcfcfc
-$bgHighlight    : #20b2aa
+$bgHighlight    : #fcfcfc
 $colDefault     : #888888
 $colHighlight   : #20b2aa
 $dropDown       : false
@@ -7,7 +7,7 @@ $dropDown       : false
   background-color: $bgDefault
   border-color: $bgDefault
   .navbar-brand
-    color: $colDefault
+    color: $colHighlight
     &:hover, &:focus
       color: $colHighlight
   .navbar-text
@@ -17,31 +17,15 @@ $dropDown       : false
       > a
         color: $colDefault
         &:hover, &:focus
-          color: $colHighlight
-      @if $dropDown
-        > .dropdown-menu
-          background-color: $bgDefault
-          > li
-            > a
-              color: $colDefault
-              &:hover, &:focus
-                color: $colHighlight
-                background-color: $bgHighlight
-            > .divider
-              background-color: $bgHighlight
-    @if $dropDown
-      .open .dropdown-menu > .active
-        > a, > a:hover, > a:focus
-          color: $colHighlight
-          background-color: $bgHighlight
+          color: $colHighlight          
     > .active
       > a, > a:hover, > a:focus
         color: $colHighlight
-        background-color: $bgHighlight
+        background-color: $bgHighlight        
     > .open
       > a, > a:hover, > a:focus
         color: $colHighlight
-        background-color: $bgHighlight
+        background-color: $bgHighlight        
   .navbar-toggle
     border-color: $bgHighlight
     &:hover, &:focus
@@ -54,14 +38,14 @@ $dropDown       : false
   .navbar-link
     color: $colDefault
     &:hover
-      color: $colHighlight
+      color: $bgHighlight
 @media (max-width: 767px)
   .navbar-default .navbar-nav .open .dropdown-menu
     > li > a
       color: $colDefault
       &:hover, &:focus
-        color: $colHighlight
+        color: $bgHighlight
     > .active
       > a, > a:hover, > a:focus
-        color: $colHighlight
+        color: $bgHighlight
         background-color: $bgHighlight
